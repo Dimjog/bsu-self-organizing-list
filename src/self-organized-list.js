@@ -33,7 +33,7 @@ class SelfOrganizedList {
     }
 
     removeAt(index) {
-
+ва
     }
 
     moveToFront(node) {
