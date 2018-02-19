@@ -93,20 +93,20 @@ var nnode = this.head;
 
     reorganize(data) {
 	if(this.length==0)
-		return false;
-	var nnode = this.node;
-	for(var i=0;i<this.length;i++)
-	{
-		if(nnode.data == data)
-			{
-				this.moveToFront(nnode);
-				return true;
-			}
-		nnode = nnode.next;
-	}
-	return false;
-    }
+            return false;
 
+        var i=0;
+        var a=this.head;
+        for(var i=0;i<this.length;i++){
+            if(a.data==data){
+                this.moveToFront(a);
+                return true;
+            }
+            a=a.next;
+        }
+
+        return false;  
+    
 }
 
 module.exports = {
