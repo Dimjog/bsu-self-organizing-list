@@ -55,7 +55,7 @@ var nnode = this.head;
     }
 
     toArray() {
-	var Arr = new Array(this.length);
+	var Arr=[];
 	var nnode =  this.head;
 	for (var i = 0; i < this.length ; i++)
 	{
