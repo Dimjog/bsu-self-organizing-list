@@ -51,7 +51,7 @@ var nnode = this.head;
 			return nnode;
 		nnode=nnode.next;
 	}
-	return null;
+	//return null;
     }
 
     toArray() {
