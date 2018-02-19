@@ -122,7 +122,19 @@ var nnode = this.head;
     }
 
     reorganize(data) {
-
+	if(this.length==0)
+		return false;
+	var nnode = this node;
+	for(var i=0;i<this.length;i++)
+	{
+		if(nnode.data == data)
+			{
+				this.moveToFront(nnode);
+				return true;
+			}
+		nnode = nnode.next;
+	}
+	return false;
     }
 
 }
