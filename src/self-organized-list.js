@@ -90,7 +90,7 @@ var nnode = this.head;
 		}
 		nnode = nnode.next;
 	}
-    }
+    
     }
 
     reorganize(data) {
