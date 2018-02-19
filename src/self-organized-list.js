@@ -104,7 +104,7 @@ if(index<0||index>=this.length)
 				nnode.prev.data = t;
 				nnode = nnode.prev;
 				if(nnode==this.head)
-					return null;
+					return;
 			}
 		}
 		nnode = nnode.next;
