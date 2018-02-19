@@ -70,10 +70,10 @@ var nnode = this.head;
     }
 
     moveToFront(node) {
-	  if(this.length<2||this.head==Node)
+	 if(this.length<2||this.head==Node)
 		return null;
 	var nnode = this.head;
-	var buf
+	var buf;
 	while(this.length)
 	{
 		if(nnode==Node)
