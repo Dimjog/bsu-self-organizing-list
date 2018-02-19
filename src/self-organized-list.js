@@ -20,14 +20,11 @@ class SelfOrganizedList {
 		this.tail.next = node;
 		node.prev = this.tail;
 		this.tail = node;
-
-		
 	}else{
 		this.head = head;
 		this.tail = tail;
 	}
 	this.length++;
-	
     }
 
     size() {
