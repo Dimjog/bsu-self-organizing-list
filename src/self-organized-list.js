@@ -21,8 +21,8 @@ class SelfOrganizedList {
 		node.prev = this.tail;
 		this.tail = node;
 	}else{
-		this.head = head;
-		this.tail = tail;
+		this.head = node;
+		this.tail = node;
 	}
 	this.length++;
     }
