@@ -51,11 +51,18 @@ var nnode = this.head;
 			return nnode;
 		nnode=nnode.next;
 	}
-	return nnode;
+	return null;
     }
 
     toArray() {
-
+	var Arr = [this.length];
+	var nnode =  this.head;
+	for (var i = 0; i < this.length ; i++)
+	{
+		Arr[i]=nnode.data;
+		nnode= nnode.next;
+	}
+	return Arr;
     }
 
     removeAt(index) {
