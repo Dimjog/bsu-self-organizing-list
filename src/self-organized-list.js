@@ -66,7 +66,22 @@ var nnode = this.head;
     }
 
     removeAt(index) {
-
+	if(index<0||index>=this.length)
+		return null;
+	var nnode = this.head
+	for(var i=0;i<this.length;i++)
+		{
+			if(i==index)
+				{
+					for(var j=i;i<this.length;j++)
+					{
+						nnode.data = nnode.next.data;
+						nnode = nnode.next;
+					}
+				}
+			nnode = nnode.next;
+		}
+		this.tail = this.tail.prev;
     }
 
     moveToFront(node) {
