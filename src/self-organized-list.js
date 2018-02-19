@@ -98,26 +98,24 @@ var nnode = this.head;
     }
 
     moveToFront(node) {
-	    if(this.length<2||this.head==Node)
-		return null;
-	var nnode = this.head;
-	var buf
-	while(this.length)
-	{
-		if(nnode==Node)
-		{
-			while(node)
-			{
-				buf = nnode.data;
-				nnode.data = nnode.prev.data;
-				nnode.prev.data = buf;
-				nnode = nnode.prev;
-				if(nnode==this.head)
-					return null;
-			}
-		}
-		nnode = nnode.next;
-	}
+	   if(this.length<2||this.head==node)
+            return;
+
+        var a=this.head;
+        while(a){
+            if(a==node){
+                while(true){
+                    var tmp=a.data;
+                    a.data=a.prev.data;
+                    a.prev.data=tmp;
+                    a=a.prev;
+                    if(a==this.head)
+                        return;
+                }
+                //return;
+            }
+            a=a.next;
+        }
     
     }
 
