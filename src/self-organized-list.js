@@ -15,7 +15,7 @@ class SelfOrganizedList {
 
     insert(data) {
         var node = new Node(data);
-	if(this.length)
+	if(this.length!=0)
 	{
 		this.tail.next = node;
 		node.prev = this.tail;
@@ -31,7 +31,7 @@ class SelfOrganizedList {
     }
 
     size() {
-
+		return this.length;
     }
 
     at(index) {
