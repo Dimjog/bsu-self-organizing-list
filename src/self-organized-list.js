@@ -97,7 +97,7 @@ if(index<0||index>=this.length)
 	{
 		if(nnode==Node)
 		{
-			while(true)
+			while(nnode)
 			{
 				var t = nnode.data;
 				nnode.data = nnode.prev.data;
