@@ -66,7 +66,7 @@ var nnode = this.head;
     }
 
     removeAt(index) {
-	if(index<0||index>=this.length)
+if(index<0||index>=this.length)
 		return null;
 	var nnode = this.head
 	for(var i=0;i<this.length;i++)
@@ -75,15 +75,18 @@ var nnode = this.head;
 				{
 					for(var j=i;i<this.length;j++)
 					{
+						
 						nnode.data = nnode.next.data;
 						nnode = nnode.next;
+						
 					}
 					break;
 				}
 			nnode = nnode.next;
 		}
 		this.tail = this.tail.prev;
-	    this.length--;
+		this.tail.next= null;
+		this.length--;
     }
 
     moveToFront(node) {
