@@ -32,7 +32,15 @@ class SelfOrganizedList {
     }
 
     at(index) {
-
+	if(index<0||index>=this.length)
+		return null;
+	var neednode = this.head
+	for(var i=0;i<this.length;i++)
+		{
+			if(i==index)
+				return neednode.data;
+			neednode = neednode.next;
+		}
     }
 
     findNode(data) {
