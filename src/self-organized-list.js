@@ -87,6 +87,23 @@ var nnode = this.head;
     }
 
     moveToFront(node) {
+	    if(this.length<2||this.head==node)
+		return null;
+	var nnode = this.head;
+	for(var i=0;i<this.length;i++)
+	{
+		if(nnode==Node)
+		{
+			while(true)
+			{
+				var t = nnode.data;
+				nnode.data = nnode.prev.data;
+				nnode.prev.data = t;
+				if(nnode==this.head)
+					return null;
+			}
+		}
+		nnode = nnode.next;
 
     }
 
