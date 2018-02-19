@@ -17,7 +17,7 @@ class SelfOrganizedList {
 	if(this.length)
 	{
 		this.tail.next = node;
-		node.prev = this.node;
+		node.prev = this.tail;
 		this.tail = node;
 
 		
