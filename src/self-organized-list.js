@@ -78,6 +78,7 @@ var nnode = this.head;
 						nnode.data = nnode.next.data;
 						nnode = nnode.next;
 					}
+					break;
 				}
 			nnode = nnode.next;
 		}
