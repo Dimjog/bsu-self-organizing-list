@@ -83,6 +83,7 @@ var nnode = this.head;
 			nnode = nnode.next;
 		}
 		this.tail = this.tail.prev;
+	    this.length--;
     }
 
     moveToFront(node) {
