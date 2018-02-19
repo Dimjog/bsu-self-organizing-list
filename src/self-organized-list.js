@@ -96,19 +96,19 @@ if(index<0||index>=this.length)
 	{
 		if(nnode==node)
 		{
-			for(var j=0;j<i;j++)
+			for(var j=0;j<this.length;j++)
 			{
 				var buf = nnode.data;
 				nnode = nnode.prev.data;
 				nnode.prev.data = buf;
 				nnode=nnode.prev;
-
+				if(nnode==this.node)
+					return null;	
 			}
-			return null;
+			
 		}
 		nnode  = nnode.next;
 	}
-	}	   
 
     }
 
