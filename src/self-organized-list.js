@@ -94,7 +94,7 @@ var nnode = this.head;
     reorganize(data) {
 	if(this.length==0)
 		return false;
-	var nnode = this.node;
+	var nnode = this.head;
 	for(var i=0;i<this.length;i++)
 	{
 		if(nnode.data == data)
@@ -105,8 +105,6 @@ var nnode = this.head;
 		nnode = nnode.next;
 	}
 	return false;
-    }
-
 }
 module.exports = {
     SelfOrganizedList,
