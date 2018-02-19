@@ -90,24 +90,24 @@ if(index<0||index>=this.length)
     }
 
     moveToFront(node) {
-	if(this.length<2||this.head==node)
-		return null;
-	var nnode = this.head;
+	if(this.length<2 || this.node==node)
+		var nnode = this.node;
 	for(var i=0;i<this.length;i++)
 	{
-		if(nnode==Node)
+		if(nnode==node)
 		{
-			while(nnode)
+			for(var j=0;j<i;j++)
 			{
-				var t = nnode.data;
-				nnode.data = nnode.prev.data;
-				nnode.prev.data = t;
-				nnode = nnode.prev;
-				if(nnode==this.head)
-					return;
+				var buf = nnode.data;
+				nnode = nnode.prev.data;
+				nnode.prev.data = buf;
+				nnode=nnode.prev;
+
 			}
+			return null;
 		}
-		nnode = nnode.next;
+		nnode  = nnode.next;
+	}
 	}	   
 
     }
