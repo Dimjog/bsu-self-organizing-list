@@ -92,25 +92,20 @@ var nnode = this.head;
     }
 
     reorganize(data) {
-	if(this.length<2||this.head==Node)
-		return null;
-	var nnode = this.head;
-	while(this.length)
-	{
-		if(nnode==Node)
-		{
-			while(true)
-			{
-				var buf = nnode.data;
-				nnode.data = nnode.prev.data;
-				nnode.prev.data = buf;
-				nnode = nnode.prev;
-				if(nnode==this.head)
-					return null;
-			}
-		}
-		nnode = nnode.next;
-	}
+	if(this.length==0)
+            return false;
+
+        var i=0;
+        var a=this.head;
+        for(var i=0;i<this.length;i++){
+            if(a.data==data){
+                this.moveToFront(a);
+                return true;
+            }
+            a=a.next;
+        }
+
+        return false;  
     }
 
 }
