@@ -90,26 +90,26 @@ if(index<0||index>=this.length)
     }
 
     moveToFront(node) {
-	if(this.length<2 || this.node==node)
-		var nnode = this.node;
-	for(var i=0;i<this.length;i++)
+	if(this.length<2||this.head==Node)
+		return null;
+	var nnode = this.head;
+	var buf
+	while(this.length)
 	{
-		if(nnode==node)
+		if(nnode==Node)
 		{
-			for(var j=0;j<this.length;j++)
+			while(node)
 			{
-				var buf = nnode.data;
-				nnode = nnode.prev.data;
+				buf = nnode.data;
+				nnode.data = nnode.prev.data;
 				nnode.prev.data = buf;
-				nnode=nnode.prev;
-				if(nnode==this.node)
-					return null;	
+				nnode = nnode.prev;
+				if(nnode==this.head)
+					return null;
 			}
-			
 		}
-		nnode  = nnode.next;
+		nnode = nnode.next;
 	}
-
     }
 
     reorganize(data) {
