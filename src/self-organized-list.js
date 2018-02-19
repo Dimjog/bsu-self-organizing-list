@@ -66,30 +66,31 @@ var nnode = this.head;
     }
 
     removeAt(index) {
-if(index<0||index>=this.length)
-		return null;
-	var nnode = this.head
-	for(var i=0;i<this.length;i++)
-		{
-			if(i==index)
-				{
-					for(var j=i;i<this.length;j++)
-					{
-						
-						nnode.data = nnode.next.data;
-						nnode = nnode.next;
-						
-					}
-					break;
-				}
-			nnode = nnode.next;
-		}
-		this.tail = this.tail.prev;
-		this.tail.next= null;
-		this.length--;
+
     }
 
     moveToFront(node) {
+	    if(this.length<2||this.head==Node)
+		return null;
+	var nnode = this.head;
+	var buf
+	while(this.length)
+	{
+		if(nnode==Node)
+		{
+			while(node)
+			{
+				buf = nnode.data;
+				nnode.data = nnode.prev.data;
+				nnode.prev.data = buf;
+				nnode = nnode.prev;
+				if(nnode==this.head)
+					return null;
+			}
+		}
+		nnode = nnode.next;
+	}
+    }
     }
 
     reorganize(data) {
