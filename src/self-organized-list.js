@@ -28,7 +28,7 @@ class SelfOrganizedList {
     }
 
     size() {
-		//return this.length;
+	return this.length;
     }
 
     at(index) {
