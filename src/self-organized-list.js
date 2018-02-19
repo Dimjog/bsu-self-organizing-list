@@ -105,6 +105,7 @@ var nnode = this.head;
 		nnode = nnode.next;
 	}
 	return false;
+    }
 }
 module.exports = {
     SelfOrganizedList,
