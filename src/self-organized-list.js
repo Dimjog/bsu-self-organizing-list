@@ -48,10 +48,10 @@ var nnode = this.head;
 	for(var i=0;i<this.length;i++)
 	{
 		if(nnode.data==data)
-			return true;
+			return nnode;
 		nnode=nnode.next;
 	}
-	return false;
+	return nnode;
     }
 
     toArray() {
