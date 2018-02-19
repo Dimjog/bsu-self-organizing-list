@@ -70,24 +70,7 @@ var nnode = this.head;
     }
 
     moveToFront(node) {
-	   if(this.length<2||this.head==node)
-            return;
-
-        var a=this.head;
-        while(a){
-            if(a==node){
-                while(true){
-                    var tmp=a.data;
-                    a.data=a.prev.data;
-                    a.prev.data=tmp;
-                    a=a.prev;
-                    if(a==this.head)
-                        return;
-                }
-                //return;
-            }
-            a=a.next;
-        }
+	  
     
     }
 
